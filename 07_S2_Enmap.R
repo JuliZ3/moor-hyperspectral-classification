@@ -6,15 +6,9 @@ library(CAST)
 library(caret)
 library(ggplot2)
 
-# -----------------------------
-# Projektionsproblem lösen (falls nötig für terra)
-# -----------------------------
-plib <- Sys.getenv("PROJ_LIB")
-prj <- system.file("proj", package = "terra")[1]
-Sys.setenv("PROJ_LIB" = prj)
 
 # Arbeitsverzeichnis setzen
-setwd("C:/Users/julia/Documents/Studium/6. Semester/Bachelorarbeit/Rehdener Moor Daten/Sentinel/")
+# setwd()
 
 # Sentinel-2-Daten laden
 sentinel <- rast("sentinel_combined_12_06_2025_ganze_Szene.tif")
@@ -65,7 +59,7 @@ names(enmap_s2_lu_combined)[(num_layers - 17):num_layers] <- c("B05","B06", "B07
 
 
 # Trainingsdaten einlesen
-trainingsites <- st_read("../Trainingsdaten - Kopie.gpkg")
+trainingsites <- st_read("../Trainingsdaten_RM.gpkg")
 
 # eindeutige ID für jedes Polygon
 trainingsites$PolyID <- 1:nrow(trainingsites)

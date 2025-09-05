@@ -4,7 +4,7 @@ library(hsdar)
 library(dplyr)
 
 # Arbeitsverzeichnis setzen
-setwd("C:/Users/julia/Documents/Studium/6. Semester/Bachelorarbeit/Rehdener Moor Daten/")
+# setwd()
 data_path <- "Donnerstag/"  # z. B. "data/asd/"
 
 # Hilfsfunktion zum Einlesen einer ASD-Datei

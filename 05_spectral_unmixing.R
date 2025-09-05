@@ -3,7 +3,7 @@ library(hsdar)
 library(terra)
 
 # Arbeitsverzeichnis setzen
-setwd("C:/Users/julia/Documents/Studium/6. Semester/Bachelorarbeit/Rehdener Moor Daten/")
+# setwd()
 
 # EnMAP-Spektraldaten laden
 spec_lib_enmap_cut <- readRDS("enmap_speclib_420–1070.rds")
@@ -82,6 +82,8 @@ str(unmix_result)
 
 # Ergebnisse als Raster speichern
 
+enmap_raster <- rast("Final EnMAP/05_25_enmap_Rehdener_Geestmoor.tif")
+
 # Anzahl Gesamtpixel und Endmember
 n_total <- ncell(enmap_raster)
 n_endmembers <- nrow(unmix_result$fractions)
@@ -122,7 +124,5 @@ for(i in 1:n_endmembers){
   plot(fraction_stack[[i]],
        col = pal,
        main = names(fraction_stack)[i],
-       zlim = c(vmin, vmax),
        legend.args = list(text='Fraktion', side=4, font=2, line=2.5))
 }
-

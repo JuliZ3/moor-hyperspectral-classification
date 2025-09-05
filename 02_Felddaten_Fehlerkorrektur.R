@@ -3,7 +3,7 @@ library(terra)
 library(hsdar)
 
 # Arbeitsverzeichnis setzen
-setwd("C:/Users/julia/Documents/Studium/6. Semester/Bachelorarbeit/Rehdener Moor Daten/")
+# setwd()
 
 # Spektralbibliothek der Feldspektren laden
 spec_lib <- readRDS("feldspektrometer_speclib_alle.rds")

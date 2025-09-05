@@ -22,7 +22,7 @@ length(wavelength)
 print(wavelength)
 
 # Arbeitsverzeichnis setzen
-#setwd("C:/Users/julia/Documents/Studium/6. Semester/Bachelorarbeit/Rehdener Moor Daten/Final EnMAP/")
+# setwd("")
 
 # Wellenlängen als Textdatei speichern
 writeLines(as.character(wavelength), "wavelengths.txt")

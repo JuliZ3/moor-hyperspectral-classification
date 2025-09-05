@@ -4,16 +4,8 @@ library(terra)
 library(raster)
 library(sf)
 
-# -----------------------------
-# Projektionsproblem lösen (falls nötig für terra)
-# -----------------------------
-plib <- Sys.getenv("PROJ_LIB")
-prj <- system.file("proj", package = "terra")[1]
-Sys.setenv("PROJ_LIB" = prj)
-
 # Arbeitsverzeichnis setzen
-setwd("C:/Users/julia/Documents/Studium/6. Semester/Bachelorarbeit/Rehdener Moor Daten/Final EnMAP/")
-
+# setwd()
 
 # EnMAP-TIFF einlesen und auf Umrisse des Rehdener Geestmoores zuschneiden
 enmap_rast <- rast("05_25_EnMAP.tif")
@@ -43,7 +35,7 @@ output_path <- "05_25_enmap_Rehdener_Geestmoor.tif"
 # EnMAP-Daten vorbereiten
 
 # Arbeitsverzeichnis setzen
-setwd("C:/Users/julia/Documents/Studium/6. Semester/Bachelorarbeit/Rehdener Moor Daten/")
+# setwd()
 
 # EnMAP-Daten einlesen
 enmap_tif <- "Final EnMAP/05_25_enmap_Rehdener_Geestmoor.tif"
